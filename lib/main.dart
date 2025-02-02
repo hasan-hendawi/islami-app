@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/screens/home_screen/home_screen.dart';
 import 'package:islami/screens/splash_screen/splash_screen.dart';
-import 'package:islami/screens/verses_screen.dart';
+import 'package:islami/screens/verses_screen/verses_screen.dart';
 
 void main() {
 runApp(const IslamiApp());
@@ -17,8 +17,10 @@ class IslamiApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0xffB7935F),
 scaffoldBackgroundColor: Colors.transparent,
+progressIndicatorTheme: ProgressIndicatorThemeData(color: Color(0xffB7935F)),
 appBarTheme: AppBarTheme(
   backgroundColor: Colors.transparent,
+
   titleTextStyle: TextStyle(fontSize: 30,color: Color(0xff242424),fontWeight: FontWeight.bold),
   centerTitle: true
 ),
@@ -29,7 +31,7 @@ appBarTheme: AppBarTheme(
     initialRoute: SplashScreen.SplashScreenRoutePage,
       routes: {
       HomeScreen.HomeScreenRoutePage:(context)=> HomeScreen(),
-      VersesScreen.VersesScreenRoutePage:(context)=> const VersesScreen(),
+      VersesScreen.VersesScreenRoutePage:(context)=> VersesScreen(),
 
       },
       debugShowCheckedModeBanner: false,
