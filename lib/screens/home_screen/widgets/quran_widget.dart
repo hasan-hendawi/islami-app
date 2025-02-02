@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islami/screens/verses_screen.dart';
+import 'package:islami/screens/verses_screen/verses_screen.dart';
 
 class QuranWidget extends StatelessWidget {
    QuranWidget({super.key});
