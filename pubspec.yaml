@@ -32,6 +32,7 @@ flutter:
   assets:
    - assets/images/
    - assets/verses_content/
+   - assets/hadeth_content/
   #   - images/a_dot_ham.jpeg
 
   # fonts:
