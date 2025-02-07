@@ -10,9 +10,10 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Future.delayed(Duration(seconds: 2),()=>Navigator.of(context).pushReplacementNamed(HomeScreen.HomeScreenRoutePage));
     return Scaffold(
-body: Container(
-  child: Image.asset("assets/images/splash_screen.png"),
-),
+      body: Container(
+        decoration: BoxDecoration(image: DecorationImage(image:AssetImage("assets/images/splash_screen.png"),fit:BoxFit.fill)),
+        // child: Image.asset("assets/images/splash_screen.png"),
+      ),
     );
   }
 }
