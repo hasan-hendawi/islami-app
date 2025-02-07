@@ -20,9 +20,9 @@ int selectedIndex = 0;
 
     return Container(
       decoration: BoxDecoration(
-        image: DecorationImage(image: AssetImage("assets/images/home_background.png"))
-
-      ),
+          image: DecorationImage(
+              image: AssetImage("assets/images/home_background.png"),
+              fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(
           title: Text("Islami"),
