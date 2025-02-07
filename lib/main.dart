@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami/screens/hadeth_screen/hadeth_screen.dart';
 import 'package:islami/screens/home_screen/home_screen.dart';
 import 'package:islami/screens/splash_screen/splash_screen.dart';
 import 'package:islami/screens/verses_screen/verses_screen.dart';
@@ -32,6 +33,7 @@ appBarTheme: AppBarTheme(
       routes: {
       HomeScreen.HomeScreenRoutePage:(context)=> HomeScreen(),
       VersesScreen.VersesScreenRoutePage:(context)=> VersesScreen(),
+      HadethScreen.HadethScreenRoutePage:(context)=> HadethScreen(),
 
       },
       debugShowCheckedModeBanner: false,

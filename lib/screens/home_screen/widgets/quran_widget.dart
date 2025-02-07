@@ -19,11 +19,14 @@ List<String> versesName= ["الفاتحه","البقرة","آل عمران","ا�
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset("assets/images/quran_header.png"),
+          Expanded(
+              flex: 1,
+              child: Image.asset("assets/images/quran_header.png")),
           Divider(thickness: 3,color: Theme.of(context).primaryColor,),
           Text("Verse Name",style: TextStyle(fontSize: 24),),
           Divider(thickness: 3,color: Theme.of(context).primaryColor,),
           Expanded(
+            flex: 3,
             child: ListView.separated(itemBuilder: (context,index){
               return InkWell(
                 onTap: (){
