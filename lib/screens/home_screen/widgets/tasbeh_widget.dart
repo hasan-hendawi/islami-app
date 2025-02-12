@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami/theme/my_theme.dart';
 
 class TasbehWidget extends StatefulWidget {
   const TasbehWidget({super.key});
@@ -21,7 +22,7 @@ class _TasbehWidgetState extends State<TasbehWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: 40),
-          Image.asset("assets/images/tasbeah.png"),
+          Image.asset(MyTheme.mode==ThemeMode.dark?"assets/images/dark_tasbeah.png":"assets/images/tasbeah.png"),
           SizedBox(height: 20),
           Text(
             "عدد التسبيحات",
@@ -31,7 +32,7 @@ class _TasbehWidgetState extends State<TasbehWidget> {
           Container(
             padding: EdgeInsets.symmetric(vertical: 12, horizontal: 15),
             decoration: BoxDecoration(
-                color: Color(0xffB7935F).withValues(alpha: 0.5),
+                color: Color(0xffB7935F).withOpacity(0.5),
                 borderRadius: BorderRadius.circular(10)),
             child: Text(counter.toString(),style: TextStyle(fontSize: 25),),
           ),

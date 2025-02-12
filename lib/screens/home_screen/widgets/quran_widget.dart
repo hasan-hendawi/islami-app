@@ -250,7 +250,7 @@ class QuranWidget extends StatelessWidget {
           ),
           Divider(
             thickness: 3,
-            color: Theme.of(context).primaryColor,
+            color: Theme.of(context).colorScheme.secondary,
           ),
           Container(
             height: 40,
@@ -267,7 +267,7 @@ class QuranWidget extends StatelessWidget {
                 ),
                 VerticalDivider(
                   thickness: 4,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
                 Expanded(
                   flex: 1,
@@ -282,7 +282,7 @@ class QuranWidget extends StatelessWidget {
           ),
           Divider(
             thickness: 3,
-            color: Theme.of(context).primaryColor,
+            color: Theme.of(context).colorScheme.secondary,
           ),
           Expanded(
             flex: 3,
@@ -304,20 +304,20 @@ class QuranWidget extends StatelessWidget {
                         Expanded(
                           child: Text(
                             versesCount[index],
-                            style: TextStyle(fontSize: 25),
+                            style: Theme.of(context).textTheme.bodyMedium,
                             textAlign: TextAlign.center,
                           ),
                         ),
                         VerticalDivider(
                           thickness: 3,
-                          color: Theme.of(context).primaryColor,
+                          color: Theme.of(context).colorScheme.secondary,
                         ),
 
 
                         Expanded(
                           child: Text(
                             versesName[index],
-                            style: TextStyle(fontSize: 25),
+                            style: Theme.of(context).textTheme.bodyMedium,
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -329,7 +329,7 @@ class QuranWidget extends StatelessWidget {
               separatorBuilder: (context, i) {
                 return Divider(
                   thickness: 2,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   indent: 16,
                   endIndent: 16,
                   height: 12,

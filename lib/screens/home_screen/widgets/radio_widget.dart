@@ -26,7 +26,7 @@ class RadioWidget extends StatelessWidget {
                 icon: Icon(
                   Icons.skip_previous,
                   size: 50,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
               IconButton(
@@ -34,7 +34,7 @@ class RadioWidget extends StatelessWidget {
                 icon: Icon(
                   Icons.play_arrow_rounded,
                   size: 75,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
               IconButton(
@@ -42,7 +42,7 @@ class RadioWidget extends StatelessWidget {
                 icon: Icon(
                   Icons.skip_next,
                   size: 50,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
             ],

@@ -27,7 +27,7 @@ class _HadethWidgetState extends State<HadethWidget> {
               flex: 1, child: Image.asset("assets/images/hadeth_header.png")),
           Divider(
             thickness: 3,
-            color: Theme.of(context).primaryColor,
+            color: Theme.of(context).colorScheme.secondary,
           ),
           Text(
             "Hadeth Name",
@@ -35,7 +35,7 @@ class _HadethWidgetState extends State<HadethWidget> {
           ),
           Divider(
             thickness: 3,
-            color: Theme.of(context).primaryColor,
+            color: Theme.of(context).colorScheme.secondary,
           ),
           Expanded(
             flex: 3,
@@ -59,7 +59,7 @@ class _HadethWidgetState extends State<HadethWidget> {
               separatorBuilder: (context, i) {
                 return Divider(
                   thickness: 2,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   indent: 16,
                   endIndent: 16,
                   height: 20,

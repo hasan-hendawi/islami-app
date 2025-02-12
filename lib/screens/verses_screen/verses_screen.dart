@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/screens/home_screen/widgets/quran_widget.dart';
 import 'package:islami/screens/verses_screen/widgets/aya_item.dart';
+import 'package:islami/theme/my_theme.dart';
 
 class VersesScreen extends StatefulWidget {
   static const String VersesScreenRoutePage = "verses_screen";
@@ -24,7 +25,7 @@ class _VersesScreenState extends State<VersesScreen> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/home_background.png"),
+              image: AssetImage(MyTheme.mode==ThemeMode.dark?"assets/images/dark_home_background.png" : "assets/images/home_background.png"),
               fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(
@@ -52,7 +53,7 @@ class _VersesScreenState extends State<VersesScreen> {
                           separatorBuilder: (context, i) {
                             return Divider(
                               thickness: 2,
-                              color: Theme.of(context).primaryColor,
+                              color: Theme.of(context).colorScheme.secondary,
                               indent: 14,
                               endIndent: 14,
                               height: 20,

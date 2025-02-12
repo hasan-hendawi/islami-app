@@ -3,6 +3,7 @@ import 'package:islami/screens/hadeth_screen/hadeth_screen.dart';
 import 'package:islami/screens/home_screen/home_screen.dart';
 import 'package:islami/screens/splash_screen/splash_screen.dart';
 import 'package:islami/screens/verses_screen/verses_screen.dart';
+import 'package:islami/theme/my_theme.dart';
 
 void main() {
 runApp(const IslamiApp());
@@ -15,20 +16,9 @@ class IslamiApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Color(0xffB7935F),
-scaffoldBackgroundColor: Colors.transparent,
-progressIndicatorTheme: ProgressIndicatorThemeData(color: Color(0xffB7935F)),
-appBarTheme: AppBarTheme(
-  backgroundColor: Colors.transparent,
-
-  titleTextStyle: TextStyle(fontSize: 30,color: Color(0xff242424),fontWeight: FontWeight.bold),
-  centerTitle: true
-),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: Color(0xffB7935F),selectedItemColor: Color(0xff242424)
-        ),
-      ),
+      theme:MyTheme.lightTheme ,
+      darkTheme: MyTheme.darkTheme,
+      themeMode:MyTheme.mode ,
     initialRoute: SplashScreen.SplashScreenRoutePage,
       routes: {
       HomeScreen.HomeScreenRoutePage:(context)=> HomeScreen(),

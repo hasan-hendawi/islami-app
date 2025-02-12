@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami/theme/my_theme.dart';
 
 import '../home_screen/widgets/hadeth_widget.dart';
 
@@ -18,7 +19,7 @@ class _HadethScreenState extends State<HadethScreen> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/home_background.png"),
+              image: AssetImage(MyTheme.mode==ThemeMode.dark?"assets/images/dark_home_background.png":"assets/images/home_background.png"),
               fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(
@@ -50,7 +51,7 @@ class _HadethScreenState extends State<HadethScreen> {
                     separatorBuilder: (context, i) {
                       return Divider(
                         thickness: 1,
-                        color: Theme.of(context).primaryColor,
+                        color: Theme.of(context).colorScheme.secondary,
                         indent: 14,
                         endIndent: 14,
                         height: 20,
