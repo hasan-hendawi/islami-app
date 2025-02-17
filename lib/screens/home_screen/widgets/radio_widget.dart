@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class RadioWidget extends StatelessWidget {
   const RadioWidget({super.key});
@@ -14,7 +16,7 @@ class RadioWidget extends StatelessWidget {
           Image.asset("assets/images/radio_header.png"),
           SizedBox(height: 30),
           Text(
-            "إذاعة القرآن الكريم",
+            AppLocalizations.of(context)!.quranRadio,
             style: TextStyle(fontSize: 25),
           ),
           SizedBox(height: 20),
@@ -26,7 +28,7 @@ class RadioWidget extends StatelessWidget {
                 icon: Icon(
                   Icons.skip_previous,
                   size: 50,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
               IconButton(
@@ -34,7 +36,7 @@ class RadioWidget extends StatelessWidget {
                 icon: Icon(
                   Icons.play_arrow_rounded,
                   size: 75,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
               IconButton(
@@ -42,7 +44,7 @@ class RadioWidget extends StatelessWidget {
                 icon: Icon(
                   Icons.skip_next,
                   size: 50,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
             ],

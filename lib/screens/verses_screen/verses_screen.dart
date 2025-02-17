@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islami/provder/setting_provider.dart';
 import 'package:islami/screens/home_screen/widgets/quran_widget.dart';
 import 'package:islami/screens/verses_screen/widgets/aya_item.dart';
+import 'package:provider/provider.dart';
 
 class VersesScreen extends StatefulWidget {
   static const String VersesScreenRoutePage = "verses_screen";
@@ -17,6 +19,8 @@ class _VersesScreenState extends State<VersesScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<SettingProvider>(context);
+
     var params = ModalRoute.of(context)?.settings.arguments as VersesDetails;
     if (ayaVerse.isEmpty) {
       readFile(params.versesNumber);
@@ -24,7 +28,7 @@ class _VersesScreenState extends State<VersesScreen> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/home_background.png"),
+              image: provider.getBackgroundImage(),
               fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(
@@ -52,7 +56,7 @@ class _VersesScreenState extends State<VersesScreen> {
                           separatorBuilder: (context, i) {
                             return Divider(
                               thickness: 2,
-                              color: Theme.of(context).primaryColor,
+                              color: Theme.of(context).colorScheme.secondary,
                               indent: 14,
                               endIndent: 14,
                               height: 20,

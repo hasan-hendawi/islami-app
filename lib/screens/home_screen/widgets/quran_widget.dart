@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/screens/verses_screen/verses_screen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranWidget extends StatelessWidget {
   QuranWidget({super.key});
@@ -250,7 +251,7 @@ class QuranWidget extends StatelessWidget {
           ),
           Divider(
             thickness: 3,
-            color: Theme.of(context).primaryColor,
+            color: Theme.of(context).colorScheme.secondary,
           ),
           Container(
             height: 40,
@@ -260,19 +261,19 @@ class QuranWidget extends StatelessWidget {
                 Expanded(
                   flex: 1,
                   child: Text(
-                    "Verse Count",
+                    AppLocalizations.of(context)!.verseName,
                     style: TextStyle(fontSize: 24),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 VerticalDivider(
                   thickness: 4,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
                 Expanded(
                   flex: 1,
                   child: Text(
-                    "Verse Name",
+                    AppLocalizations.of(context)!.verseCount,
                     style: TextStyle(fontSize: 24),
                     textAlign: TextAlign.center,
                   ),
@@ -282,7 +283,7 @@ class QuranWidget extends StatelessWidget {
           ),
           Divider(
             thickness: 3,
-            color: Theme.of(context).primaryColor,
+            color: Theme.of(context).colorScheme.secondary,
           ),
           Expanded(
             flex: 3,
@@ -303,21 +304,19 @@ class QuranWidget extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Text(
-                            versesCount[index],
-                            style: TextStyle(fontSize: 25),
+                            versesName[index],
+                            style: Theme.of(context).textTheme.bodyMedium,
                             textAlign: TextAlign.center,
                           ),
                         ),
                         VerticalDivider(
                           thickness: 3,
-                          color: Theme.of(context).primaryColor,
+                          color: Theme.of(context).colorScheme.secondary,
                         ),
-
-
                         Expanded(
                           child: Text(
-                            versesName[index],
-                            style: TextStyle(fontSize: 25),
+                            versesCount[index],
+                            style: Theme.of(context).textTheme.bodyMedium,
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -329,11 +328,10 @@ class QuranWidget extends StatelessWidget {
               separatorBuilder: (context, i) {
                 return Divider(
                   thickness: 2,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   indent: 16,
                   endIndent: 16,
                   height: 12,
-
                 );
               },
               itemCount: versesName.length,

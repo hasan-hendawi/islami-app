@@ -1,0 +1,20 @@
+{
+  "titleApp": "islami",
+  "verseName": "Verse Name",
+  "verseCount": "Verse Count",
+  "hadethName": "Hadeth Name",
+  "numberOfTasbeehs": "Number of Tasbeehs",
+  "quranRadio": "Quran Radio",
+  "quranLabel": "Quran",
+  "hadethLabel": "Hadeth",
+  "sebhaaLabel": "Sebha",
+  "radioLabel": "Radio",
+  "settingLabel": "Setting",
+  "themeLabel": "Theme",
+  "languageLabel": "Language",
+  "darkThemeLabel": "Dark",
+  "lightThemeLabel": "Light",
+  "englishLanguageLabel": "English",
+  "arabicLanguageLabel": "Arabic"
+
+}

@@ -1,0 +1,20 @@
+{
+  "titleApp": "اسلامي",
+  "verseName": "اسم السورة",
+  "verseCount": "عدد الايات",
+  "hadethName": "اسم الحديث",
+  "numberOfTasbeehs": "عدد التسبيحات",
+  "quranRadio": "اذاعة القران الكريم",
+  "quranLabel": "القران الكريم",
+  "hadethLabel": "احاديث",
+  "sebhaaLabel": "سبحة",
+  "radioLabel": "راديو",
+  "settingLabel": "الاعدادات",
+  "themeLabel": "السمات",
+  "languageLabel": "اللغة",
+  "darkThemeLabel": "مظلم",
+  "lightThemeLabel": "مضيء",
+  "englishLanguageLabel": "اللغة الإنجليزية",
+  "arabicLanguageLabel": "اللغة العربية"
+
+}

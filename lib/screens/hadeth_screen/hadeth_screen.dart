@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:islami/provder/setting_provider.dart';
 
 import '../home_screen/widgets/hadeth_widget.dart';
+import 'package:provider/provider.dart';
 
 class HadethScreen extends StatefulWidget {
   static const String HadethScreenRoutePage = "hadeth_screen";
@@ -14,11 +16,13 @@ class HadethScreen extends StatefulWidget {
 class _HadethScreenState extends State<HadethScreen> {
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<SettingProvider>(context);
+
     var hadeth = ModalRoute.of(context)?.settings.arguments as HadethDetails;
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/home_background.png"),
+              image: provider.getBackgroundImage(),
               fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(
@@ -50,7 +54,7 @@ class _HadethScreenState extends State<HadethScreen> {
                     separatorBuilder: (context, i) {
                       return Divider(
                         thickness: 1,
-                        color: Theme.of(context).primaryColor,
+                        color: Theme.of(context).colorScheme.secondary,
                         indent: 14,
                         endIndent: 14,
                         height: 20,

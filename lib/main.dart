@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:islami/provder/setting_provider.dart';
 import 'package:islami/screens/hadeth_screen/hadeth_screen.dart';
 import 'package:islami/screens/home_screen/home_screen.dart';
 import 'package:islami/screens/splash_screen/splash_screen.dart';
 import 'package:islami/screens/verses_screen/verses_screen.dart';
-
+import 'package:islami/theme/my_theme.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 void main() {
-runApp(const IslamiApp());
+runApp(ChangeNotifierProvider(create:(context)=> SettingProvider() ,
+    child: const IslamiApp()));
 }
 
 
@@ -14,21 +19,21 @@ class IslamiApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<SettingProvider>(context);
     return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Color(0xffB7935F),
-scaffoldBackgroundColor: Colors.transparent,
-progressIndicatorTheme: ProgressIndicatorThemeData(color: Color(0xffB7935F)),
-appBarTheme: AppBarTheme(
-  backgroundColor: Colors.transparent,
-
-  titleTextStyle: TextStyle(fontSize: 30,color: Color(0xff242424),fontWeight: FontWeight.bold),
-  centerTitle: true
-),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: Color(0xffB7935F),selectedItemColor: Color(0xff242424)
-        ),
-      ),
+      localizationsDelegates:  const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en'), // English
+        Locale('ar'), // Spanish
+      ],locale: provider.locale,
+      theme:MyTheme.lightTheme ,
+      darkTheme: MyTheme.darkTheme,
+      themeMode:provider.mode ,
     initialRoute: SplashScreen.SplashScreenRoutePage,
       routes: {
       HomeScreen.HomeScreenRoutePage:(context)=> HomeScreen(),
