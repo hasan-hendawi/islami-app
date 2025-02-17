@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/screens/hadeth_screen/hadeth_screen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class HadethWidget extends StatefulWidget {
   HadethWidget({super.key});
@@ -30,7 +32,7 @@ class _HadethWidgetState extends State<HadethWidget> {
             color: Theme.of(context).colorScheme.secondary,
           ),
           Text(
-            "Hadeth Name",
+            AppLocalizations.of(context)!.hadethName,
             style: TextStyle(fontSize: 24),
           ),
           Divider(

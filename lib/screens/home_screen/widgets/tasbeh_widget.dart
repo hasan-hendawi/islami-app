@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:islami/provder/setting_provider.dart';
 import 'package:islami/theme/my_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 class TasbehWidget extends StatefulWidget {
   const TasbehWidget({super.key});
@@ -14,6 +17,8 @@ class _TasbehWidgetState extends State<TasbehWidget> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<SettingProvider>(context);
+
     List<String> tasbeeh = ["سبحان الله", "الحمد لله", "الله اكبر"];
     return SizedBox(
       width: double.infinity,
@@ -22,17 +27,17 @@ class _TasbehWidgetState extends State<TasbehWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: 40),
-          Image.asset(MyTheme.mode==ThemeMode.dark?"assets/images/dark_tasbeah.png":"assets/images/tasbeah.png"),
+          Image.asset(provider.mode==ThemeMode.dark?"assets/images/dark_tasbeah.png":"assets/images/tasbeah.png"),
           SizedBox(height: 20),
           Text(
-            "عدد التسبيحات",
+            AppLocalizations.of(context)!.numberOfTasbeehs,
             style: TextStyle(fontSize: 25),
           ),
           SizedBox(height: 20),
           Container(
             padding: EdgeInsets.symmetric(vertical: 12, horizontal: 15),
             decoration: BoxDecoration(
-                color: Color(0xffB7935F).withOpacity(0.5),
+                color: Theme.of(context).colorScheme.secondary.withOpacity(0.4),
                 borderRadius: BorderRadius.circular(10)),
             child: Text(counter.toString(),style: TextStyle(fontSize: 25),),
           ),
@@ -56,7 +61,7 @@ class _TasbehWidgetState extends State<TasbehWidget> {
             ),
             style: ElevatedButton.styleFrom(
               backgroundColor:
-                  Theme.of(context).primaryColor, // Background color
+                  Theme.of(context).colorScheme.primary, // Background color
               foregroundColor: Colors.white, // Text color
             ),
           ),

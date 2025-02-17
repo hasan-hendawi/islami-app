@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:islami/provder/setting_provider.dart';
 import 'package:islami/screens/home_screen/home_screen.dart';
 import 'package:islami/theme/my_theme.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatelessWidget {
   static const String SplashScreenRoutePage = "splash_screen";
@@ -9,10 +11,12 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<SettingProvider>(context);
+
     Future.delayed(Duration(seconds: 2),()=>Navigator.of(context).pushReplacementNamed(HomeScreen.HomeScreenRoutePage));
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(image: DecorationImage(image:AssetImage(MyTheme.mode==ThemeMode.dark? "assets/images/dark_splash_screen.png":"assets/images/splash_screen.png"),fit:BoxFit.fill)),
+        decoration: BoxDecoration(image: DecorationImage(image:AssetImage(provider.mode==ThemeMode.dark? "assets/images/dark_splash_screen.png":"assets/images/splash_screen.png"),fit:BoxFit.fill)),
         // child: Image.asset("assets/images/splash_screen.png"),
       ),
     );
