@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:islami/provder/setting_provider.dart';
-import 'package:islami/theme/my_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
@@ -37,7 +36,7 @@ class _TasbehWidgetState extends State<TasbehWidget> {
           Container(
             padding: EdgeInsets.symmetric(vertical: 12, horizontal: 15),
             decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.secondary.withOpacity(0.4),
+                color: Theme.of(context).colorScheme.secondary.withValues(alpha: 0.45),
                 borderRadius: BorderRadius.circular(10)),
             child: Text(counter.toString(),style: TextStyle(fontSize: 25),),
           ),

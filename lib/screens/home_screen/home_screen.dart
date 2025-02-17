@@ -5,7 +5,6 @@ import 'package:islami/screens/home_screen/widgets/quran_widget.dart';
 import 'package:islami/screens/home_screen/widgets/radio_widget.dart';
 import 'package:islami/screens/home_screen/widgets/setting_widget.dart';
 import 'package:islami/screens/home_screen/widgets/tasbeh_widget.dart';
-import 'package:islami/theme/my_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 

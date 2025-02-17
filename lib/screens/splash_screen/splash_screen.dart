@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/provder/setting_provider.dart';
 import 'package:islami/screens/home_screen/home_screen.dart';
-import 'package:islami/theme/my_theme.dart';
 import 'package:provider/provider.dart';
 
 class SplashScreen extends StatelessWidget {

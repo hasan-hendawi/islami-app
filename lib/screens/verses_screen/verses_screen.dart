@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:islami/provder/setting_provider.dart';
 import 'package:islami/screens/home_screen/widgets/quran_widget.dart';
 import 'package:islami/screens/verses_screen/widgets/aya_item.dart';
-import 'package:islami/theme/my_theme.dart';
 import 'package:provider/provider.dart';
 
 class VersesScreen extends StatefulWidget {
